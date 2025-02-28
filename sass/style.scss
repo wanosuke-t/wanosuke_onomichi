@@ -1,0 +1,174 @@
+// ブレイクポイント
+@use "sass:map";
+
+$breakpoints: (
+  sp: "not screen and (min-width: 768px)",
+  tb: "screen and (min-width: 768px) and (max-width: 1024px)",
+  pc: "screen and (min-width: 768px)",
+) !default;
+
+@mixin mq($breakpoint: pc) {
+  @media #{map.get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// 変数
+$font-family--ja-primary: "Noto Sans JP", serif;
+$font-family--ja-secondary: "Kiwi Maru", serif;
+$font-family--en-primary: "Courgette", serif;
+$font-family--en-secondary: "Josefin Sans", serif;
+
+$color--main: #9ed0e0;
+$color--sub-1: #67b0c7;
+$color--sub-2: #cce1e4;
+$color--sub-3: #e9f6f8;
+$color--accent-1: #ce2073;
+$color--accent-2: #ffee56;
+$color--black: #4a3636;
+$color--deep-gray: #cccccc;
+$color--light-gray: #f5f5f5;
+$color--white: #ffffff;
+
+// ベース
+body {
+  color: $color--black;
+  font-family: $font-family--ja-primary;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  @include mq(pc) {
+    font-size: 16px;
+  }
+}
+
+// 共通
+.hide-on-sp {
+  @include mq(sp) {
+    display: none;
+  }
+}
+
+.hide-on-pc {
+  @include mq(pc) {
+    display: none;
+  }
+}
+
+.button {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 40px;
+  border: 2px solid $color--black;
+  background: $color--white;
+  box-shadow: 0px 4px 0px 0px #4a3636;
+  padding: calc(6px - 2px) calc(24px - 2px) calc(8px - 2px);
+}
+
+// header
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding-block: 18px;
+
+  @include mq(pc) {
+    padding-block: 14px;
+  }
+}
+
+.header__inner {
+  padding-inline: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq(pc) {
+    padding-inline: 24px;
+    max-width: 1512px;
+    margin-inline: auto;
+  }
+}
+
+.header__logo {
+  flex-grow: 1;
+
+  img {
+    display: block;
+    width: 210px;
+
+    @include mq(pc) {
+      width: 183px;
+    }
+
+    @include mq(tb) {
+      width: 150px;
+    }
+  }
+}
+
+.header__drawer-icon {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+
+  @include mq(pc) {
+    display: none;
+  }
+}
+
+.header__drawer-bar {
+  width: 32px;
+  height: 3px;
+  left: 0;
+  background: $color--black;
+  border-radius: 2px;
+
+  &:nth-of-type(1) {
+    position: relative;
+    width: 25.6px;
+  }
+}
+
+.header__drawer-dot {
+  position: absolute;
+  width: 4.8px;
+  height: 3px;
+  top: 0;
+  left: 27.2px;
+  right: 0;
+  background: $color--black;
+  border-radius: 2px;
+}
+
+.header__nav {
+  display: none;
+
+  @include mq(pc) {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__nav-item {
+}
+
+.header__nav-link {
+  font-size: 12px;
+}
+
+.header__button {
+  a {
+  }
+}
