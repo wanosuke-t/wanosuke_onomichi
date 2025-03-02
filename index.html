@@ -104,6 +104,7 @@
         <a class="button" href="#step">応募してみる</a>
       </div>
     </nav>
+
     <!-- fv -->
     <section class="fv">
       <div class="fv__background">
@@ -129,12 +130,15 @@
         </h2>
         <div class="fv__images">
           <div class="fv__image-smartphone">
-            <img
-              src="./img/fv-smartphone.png"
-              alt=""
-              width="500"
-              height="1020"
-            />
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/fv-smartphone.png" />
+              <img
+                src="./img/sp/fv-smartphone.png"
+                alt="#見つけて尾道レトロ スマートフォンの画像"
+                width="500"
+                height="1020"
+                />
+            </picture>
           </div>
           <div class="fv__image-fukidashi">
             <img src="./img/fv-fukidashi.png" alt="" width="488" height="260" />
@@ -155,6 +159,129 @@
       </div>
     </section>
     <!-- about -->
+    <section id="about" class="about">
+      <div class="about__image-diagonal">
+        <img src="./img/diagonal-pattern.png" alt="" width="500" height="500" />
+      </div>
+      <div class="about__image-pawpads">
+        <img src="./img/about-pawpads.png" alt="" width="201" height="440" />
+      </div>
+      <div class="about__image-photo-left">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="./img/about-photo-left.png"
+          />
+          <img
+            src="./img/sp/about-photo-left.png"
+            alt=""
+            width="480"
+            height="480"
+          />
+        </picture>
+      </div>
+      <div class="about__image-photo-right">
+        <img
+          src="./img/about-photo-right.png"
+          alt=""
+          width="961"
+          height="961"
+        />
+      </div>
+      <div class="about__image-slope">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/about-slope.png" />
+          <img
+            src="./img/sp/about-slope.png"
+            alt=""
+            width="854"
+            height="1634"
+          />
+        </picture>
+      </div>
+      <div class="about__image-goods-1">
+        <img src="./img/about-goods-1.png" alt="" width="1510" height="738" />
+      </div>
+      <div class="about__image-goods-2">
+        <img src="./img/about-goods-2.png" alt="" width="532" height="528" />
+      </div>
+      <div class="about__image-wave">
+        <img src="./img/about-wave.png" alt="" width="1752" height="95" />
+      </div>
+      <div class="about__inner">
+        <div class="about__card">
+          <div class="about__title">
+            <div class="about__title-icon">
+              <img
+                src="./img/about-title-icon.png"
+                alt=""
+                width="96"
+                height="96"
+              />
+            </div>
+            <p class="about__title-en">About</p>
+            <h2 class="about__title-jp">キャンペーンについて</h2>
+          </div>
+          <p class="about__subtitle hide-on-pc">
+            あなたの心が動いた尾道の瞬間を<br />＼ おしえてください！ ／
+          </p>
+          <p class="about__subtitle hide-on-sp">
+            ＼あなたの心が動いた尾道の瞬間を、おしえてください！／
+          </p>
+
+          <div class="about__text">
+            <p>
+              風情あふれる坂道に、静かに佇むお寺。<br />路地裏の角をまがれば<br
+                class="hide-on-pc"
+              />気ままにお昼寝する猫に出会え、<br />ふと振り返れば、美しい瀬戸内の海が。
+            </p>
+            <p>
+              数々の映画の舞台にもなってきたこの街には<br />心がほどけるような、<br
+                class="hide-on-pc"
+              />レトロでやさしい風景が広がっています。
+            </p>
+            <p>
+              あなたの見つけた尾道のなつかしい景色を、<br />ぜひおしえてください。
+            </p>
+            <p>
+              尾道観光部（@onomichi_retro）を<br
+                class="hide-on-pc"
+              />フォロー&<br class="hide-on-sp" />尾道で撮影した写真を、<br
+                class="hide-on-pc"
+              />ハッシュタグ「<span class="bold">#見つけて尾道レトロ</span
+              >」を<br class="hide-on-pc" />つけて<br
+                class="hide-on-sp"
+              />Instagramに投稿いただいた方の中から
+            </p>
+          </div>
+          <p class="about__message">尾道のギフトを100名様にプレゼント！</p>
+          <div class="about__button">
+            <a class="button button--large" href="#step">参加の仕方はこちら</a>
+          </div>
+        </div>
+        <div class="about__image-arrow">
+          <img src="./img/arrow.png" alt="" width="281" height="100" />
+        </div>
+      </div>
+      <div class="about__bottom">
+        <div class="about__bottom-image">
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="./img/about-bottom-img.svg"
+            />
+            <img
+              src="./img/sp/about-bottom-img.svg"
+              alt=""
+              width="357"
+              height="40"
+            />
+          </picture>
+        </div>
+        <div class="about__swiper"></div>
+      </div>
+    </section>
+
     <!-- step -->
     <!-- prizes -->
     <!-- spots -->
