@@ -7,17 +7,20 @@
     <!-- noindex -->
     <meta name="robots" content="noindex" />
 
+    <!-- title -->
     <title>#見つけて尾道レトロキャンペーン!</title>
     <meta
       name="description"
       content="あなたの見つけたレトロな尾道の一枚をInstagramに投稿しよう"
     />
 
+    <!-- favicon -->
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kiwi+Maru:wght@300;400;500&family=Noto+Sans+JP:wght@100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -39,14 +42,18 @@
             />
           </a>
         </h1>
-        <div class="header__drawer-icon">
-          <div class="header__drawer-bar">
+        <button
+          id="js-drawer-button"
+          class="header__drawer-button"
+          aria-label="メニューボタン"
+        >
+          <span class="header__drawer-bar">
             <span class="header__drawer-dot"></span>
-          </div>
-          <div class="header__drawer-bar"></div>
-          <div class="header__drawer-bar"></div>
-        </div>
-        <nav class="header__nav">
+          </span>
+          <span class="header__drawer-bar"></span>
+          <span class="header__drawer-bar"></span>
+        </button>
+        <nav class="header__nav" aria-label="ヘッダーメニュー">
           <ul class="header__nav-list">
             <li class="header__nav-item">
               <a href="#about" class="header__nav-link">キャンペーンについて</a>
@@ -63,15 +70,90 @@
             <li class="header__nav-item">
               <a href="#info" class="header__nav-link">参加要項</a>
             </li>
-            <li class="header__nav-item hide-on-pc">
-              <a href="#contact" class="header__nav-link">お問い合わせ</a>
-            </li>
           </ul>
-          <div class="header__button"><a class="button" href="#step">応募してみる</a></div>
+          <div class="header__button">
+            <a class="button button--small" href="#step">応募してみる</a>
+          </div>
         </nav>
       </div>
     </header>
+
+    <!-- drawer -->
+    <nav id="js-drawer" class="drawer" aria-label="ドロワーメニュー">
+      <ul class="drawer__nav-list">
+        <li class="drawer__nav-item">
+          <a href="#about" class="drawer__nav-link">キャンペーンについて</a>
+        </li>
+        <li class="drawer__nav-item">
+          <a href="#prizes" class="drawer__nav-link">キャンペーン特典</a>
+        </li>
+        <li class="drawer__nav-item">
+          <a href="#spots" class="drawer__nav-link">おすすめスポット</a>
+        </li>
+        <li class="drawer__nav-item">
+          <a href="#qa" class="drawer__nav-link">よくある質問</a>
+        </li>
+        <li class="drawer__nav-item">
+          <a href="#info" class="drawer__nav-link">参加要項</a>
+        </li>
+        <li class="drawer__nav-item">
+          <a href="#contact" class="drawer__nav-link">お問い合わせ</a>
+        </li>
+      </ul>
+      <div class="drawer__button">
+        <a class="button" href="#step">応募してみる</a>
+      </div>
+    </nav>
     <!-- fv -->
+    <section class="fv">
+      <div class="fv__background">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/fv-bg.jpg" />
+          <img src="./img/sp/fv-bg.jpg" alt="" width="750" height="1108" />
+        </picture>
+      </div>
+      <div class="fv__inner">
+        <p class="fv__description">
+          あなたの見つけたレトロな尾道の一枚を<br />Instagramに投稿しよう
+        </p>
+        <h2 class="fv__lead">
+          <picture>
+            <source media="(min-width: 768px)" srcset="./img/fv-lead.png" />
+            <img
+              src="./img/sp/fv-lead.png"
+              alt="#見つけて尾道レトロキャンペーン！"
+              width="1040"
+              height="316"
+            />
+          </picture>
+        </h2>
+        <div class="fv__images">
+          <div class="fv__image-smartphone">
+            <img
+              src="./img/fv-smartphone.png"
+              alt=""
+              width="500"
+              height="1020"
+            />
+          </div>
+          <div class="fv__image-fukidashi">
+            <img src="./img/fv-fukidashi.png" alt="" width="488" height="260" />
+          </div>
+          <div class="fv__image-present">
+            <img src="./img/fv-present.png" alt="" width="360" height="360" />
+          </div>
+          <div class="fv__image-food">
+            <img src="./img/fv-food.png" alt="" width="424" height="664" />
+          </div>
+          <div class="fv__image-cat-1">
+            <img src="./img/fv-cat-1.png" alt="" width="340" height="380" />
+          </div>
+          <div class="fv__image-cat-2">
+            <img src="./img/fv-cat-2.png" alt="" width="466" height="348" />
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- about -->
     <!-- step -->
     <!-- prizes -->
@@ -83,6 +165,7 @@
     <!-- footer -->
 
     <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/script.js" defer></script>
   </body>
 </html>
