@@ -25,6 +25,7 @@
     />
 
     <!-- css -->
+    <link rel="stylesheet" href="./css/lib/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -131,13 +132,16 @@
         <div class="fv__images">
           <div class="fv__image-smartphone">
             <picture>
-              <source media="(min-width: 768px)" srcset="./img/fv-smartphone.png" />
+              <source
+                media="(min-width: 768px)"
+                srcset="./img/fv-smartphone.png"
+              />
               <img
                 src="./img/sp/fv-smartphone.png"
                 alt="#見つけて尾道レトロ スマートフォンの画像"
                 width="500"
                 height="1020"
-                />
+              />
             </picture>
           </div>
           <div class="fv__image-fukidashi">
@@ -164,7 +168,7 @@
         <img src="./img/diagonal-pattern.png" alt="" width="500" height="500" />
       </div>
       <div class="about__image-pawpads">
-        <img src="./img/about-pawpads.png" alt="" width="201" height="440" />
+        <img src="./img/pawpads.png" alt="" width="201" height="440" />
       </div>
       <div class="about__image-photo-left">
         <picture>
@@ -210,8 +214,8 @@
       </div>
       <div class="about__inner">
         <div class="about__card">
-          <div class="about__title">
-            <div class="about__title-icon">
+          <div class="title">
+            <div class="title-icon">
               <img
                 src="./img/about-title-icon.png"
                 alt=""
@@ -219,8 +223,8 @@
                 height="96"
               />
             </div>
-            <p class="about__title-en">About</p>
-            <h2 class="about__title-jp">キャンペーンについて</h2>
+            <p class="title-en">About</p>
+            <h2 class="title-jp">キャンペーンについて</h2>
           </div>
           <p class="about__subtitle hide-on-pc">
             あなたの心が動いた尾道の瞬間を<br />＼ おしえてください！ ／
@@ -244,7 +248,7 @@
               あなたの見つけた尾道のなつかしい景色を、<br />ぜひおしえてください。
             </p>
             <p>
-              尾道観光部（@onomichi_retro）を<br
+              尾道観光部（<span class="underline">@onomichi_retro</span>）を<br
                 class="hide-on-pc"
               />フォロー&<br class="hide-on-sp" />尾道で撮影した写真を、<br
                 class="hide-on-pc"
@@ -256,7 +260,9 @@
           </div>
           <p class="about__message">尾道のギフトを100名様にプレゼント！</p>
           <div class="about__button">
-            <a class="button button--large" href="#step">参加の仕方はこちら</a>
+            <a class="button button--responsive" href="#step"
+              >参加の仕方はこちら</a
+            >
           </div>
         </div>
         <div class="about__image-arrow">
@@ -278,11 +284,186 @@
             />
           </picture>
         </div>
-        <div class="about__swiper"></div>
+        <div class="about__slider">
+          <!-- Slider main container -->
+          <div class="swiper about__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper about__swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide about__swiper-slide">
+                <img
+                  src="./img/about-scroll-1.png"
+                  alt=""
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="swiper-slide about__swiper-slide">
+                <img
+                  src="./img/about-scroll-2.png"
+                  alt=""
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="swiper-slide about__swiper-slide">
+                <img
+                  src="./img/about-scroll-3.png"
+                  alt=""
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="swiper-slide about__swiper-slide">
+                <img
+                  src="./img/about-scroll-4.png"
+                  alt=""
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="swiper-slide about__swiper-slide">
+                <img
+                  src="./img/about-scroll-5.png"
+                  alt=""
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="swiper-slide about__swiper-slide">
+                <img
+                  src="./img/about-scroll-6.png"
+                  alt=""
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="swiper-slide about__swiper-slide">
+                <img
+                  src="./img/about-scroll-7.png"
+                  alt=""
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="swiper-slide about__swiper-slide">
+                <img
+                  src="./img/about-scroll-8.png"
+                  alt=""
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="swiper-slide about__swiper-slide">
+                <img
+                  src="./img/about-scroll-9.png"
+                  alt=""
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="swiper-slide about__swiper-slide">
+                <img
+                  src="./img/about-scroll-10.png"
+                  alt=""
+                  width="400"
+                  height="400"
+                />
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div> -->
+            <!-- <div class="swiper-button-next"></div> -->
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- step -->
+    <section class="step">
+      <div class="step__inner">
+        <div class="title">
+          <div class="title-icon">
+            <img
+              src="./img/step-title-icon.png"
+              alt=""
+              width="96"
+              height="96"
+            />
+          </div>
+          <p class="title-en">How to Enter</p>
+          <h2 class="title-jp">応募の仕方</h2>
+        </div>
+        <ul class="step__list">
+          <li class="step__item">
+            <div class="step__number">
+              <img src="./img/step-1.png" alt="Step 01" />
+            </div>
+            <div class="step__content">
+              <h3 class="step__header">アカウントをフォロー</h3>
+              <p class="step__detail">
+                Instagramアプリをダウンロードして、<br />公式アカウント尾道観光部<br class="hide-on-sp">(<span
+                  class="underline"
+                  >@onomichi_retro</span
+                >)の<br class="hide-on-pc" />Instagramの<br
+                  class="hide-on-sp"
+                />アカウントをフォローしてにゃん。
+              </p>
+              <a class="step__link">
+                <div class="step__link-icon">
+                  <img src="./img/icon-instagram.svg" alt="" />
+                </div>
+                <span class="step__link-text">onomichi_tabi をフォロー</span>
+              </a>
+            </div>
+          </li>
+          <li class="step__item">
+            <div class="step__number">
+              <img src="./img/step-2.png" alt="Step 02" />
+            </div>
+            <div class="step__content">
+              <h3 class="step__header">尾道で撮影</h3>
+              <p class="step__detail">
+                尾道の旅で「レトロ」を感じられる<br />写真を撮影してほしいんだにゃ。<br />美しい景色、愛らしい猫、美味しい<br
+                  class="hide-on-sp"
+                />食べ物や<br
+                  class="hide-on-pc"
+                />可愛いお土産など、なんでもOK！
+              </p>
+            </div>
+          </li>
+          <li class="step__item">
+            <div class="step__number">
+              <img src="./img/step-3.png" alt="Step 03" />
+            </div>
+            <div class="step__content">
+              <h3 class="step__header">ハッシュタグをつけて投稿！</h3>
+              <p class="step__detail">
+                ハッシュタグ「<span class="bold">＃見つけて尾道レトロ</span
+                >」を<br />必ずつけて投稿してにゃん！<br />投稿して頂いた方の中から<br />100名様に尾道の豪華な商品をプレゼント！
+              </p>
+            </div>
+          </li>
+        </ul>
+        <div class="step__button">
+          <button class="button button--responsive">
+            #見つけて尾道レトロ の最新投稿を見る
+          </button>
+        </div>
+      </div>
+      <div class="step__image-map"><img src="./img/step-map.png" alt="" width="920" height="1378" /></div>
+      <div class="step__image-cat-1"><img src="./img/step-cat-1.png" alt="" width="476" height="282" /></div>
+      <div class="step__image-cat-2"><img src="./img/step-cat-2.png" alt="" width="428" height="364" /></div>
+      <div class="step__image-pawpads-1"><img src="./img/pawpads.png" alt="" width="200" height="441" /></div>
+      <div class="step__image-pawpads-2"><img src="./img/pawpads.png" alt="" width="200" height="441" /></div>
+      <div class="step__image-pawpads-3"><img src="./img/pawpads.png" alt="" width="200" height="441" /></div>
+    </section>
     <!-- prizes -->
     <!-- spots -->
     <!-- qa -->
@@ -292,6 +473,7 @@
     <!-- footer -->
 
     <!-- js -->
+    <script src="./js/lib/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/script.js" defer></script>
   </body>
