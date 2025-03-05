@@ -786,7 +786,7 @@
           </li>
           <li class="contact__item">
             <div class="contact__head">
-              <label for="contact__ype" class="contact__label">お問い合わせ内容</label>
+              <label for="contact__type" class="contact__label">お問い合わせ内容</label>
               <span class="contact__tag">必須</span>
             </div>
             <div class="contact__input">
@@ -798,9 +798,40 @@
               </select>
             </div>
           </li>
+          <li class="contact__item">
+            <div class="contact__head">
+              <span class="contact__label">メールマガジン</span>
+            </div>
+            <div class="contact__input">
+              <div class="contact__radios">
+                <label class="contact__radio">
+                  <input class="js-contact__input contact__radio_input" type="radio" name="mail-magazine-request" />
+                  <span class="contact__radio_text">希望する</span>
+                </label>
+                <label class="contact__radio">
+                  <input class="js-contact__input contact__radio_input" type="radio" name="mail-magazine-request" />
+                  <span class="contact__radio_text">希望しない</span>
+                </label>
+              </div>
+            </div>
+          </li>
+          <li class="contact__item">
+            <div class="contact__head">
+              <label for="your-message" class="contact__label">メッセージ</label>
+              <span class="contact__tag">必須</span>
+            </div>
+            <div class="contact__input">
+              <textarea class="js-contact__input contact__textarea" name="your-message" id="your-message"
+                placeholder="このキャンペーンに関するお問い合わせがある方は、こちらにご相談内容をご入力ください。3営業日以内にご返信いたします。" required></textarea>
+            </div>
+          </li>
         </ul>
         <div class="contact__privacy">
-          <span class="contact__privacy-text">プライバシーポリシーに合意する</span>
+          <label class="contact__checkbox">
+            <input class="js-contact__input contact__input-checkbox" type="checkbox" name="your-privacy"
+              id="your-privacy" required />
+            <span class="contact__privacy-text"><a href="" class="underline">プライバシーポリシー</a>に合意する</span>
+          </label>
         </div>
         <div class="contact__submit">
           <input type="submit" value="上記の内容を送信する" class="button button--responsive">
@@ -809,8 +840,44 @@
     </div>
   </section>
 
-  <!-- page top -->
   <!-- footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__heading"></p>
+      <div class="footer__icons"></div>
+      <div class="footer__image-text"><img src="" alt=""></div>
+      <div class="footer__map-box">
+        <div class="footer__map"></div>
+        <div class="footer__map-info">
+          <div class="footer__logo"><img src="" alt=""></div>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <p class="footer__label"></p>
+              <p class="footer__content"></p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__label"></p>
+              <p class="footer__content"></p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__label"></p>
+              <p class="footer__content"></p>
+            </li>
+            <li class="footer__item">
+              <p class="footer__label"></p>
+              <p class="footer__content"></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- page top -->
+      <div class="footer__page-top">
+        <button class="footer__page-top-button"><img src="" alt=""></button>
+      </div>
+      <!-- /page top -->
+    </div>
+    <div class="footer__copyright"><small></small></div>
+  </footer>
 
   <!-- js -->
   <script src="./js/lib/swiper-bundle.min.js"></script>
