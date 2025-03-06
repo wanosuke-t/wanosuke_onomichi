@@ -1,7 +1,7 @@
 // ドロワーメニュー
-$("#js-drawer-button").on("click", function () {
+$("#js-drawer-icon").on("click", function () {
   $(this).toggleClass("is-checked");
-  $("#js-drawer").slideToggle();
+  $("#js-drawer-content").slideToggle();
 });
 
 // about スワイパー
@@ -124,3 +124,30 @@ document.getElementById("js-contact__form").addEventListener("submit", function(
   // フォームをリセットする場合
   this.reset(); // thisはフォーム要素を指す
 });
+
+
+// スマホのドロワーアイコンを消す処理
+$('#js-drawer-content a[href^="#"]').on("click", function (e) {
+  $("#js-drawer-icon").removeClass("is-checked");
+  $("#js-drawer-content").slideUp();
+});
+
+
+// // スムーススクロール
+// $('a[href^="#"]').on("click", function (e) {
+//   e.preventDefault();
+//   const scrollSpeed = 1000;
+//   const targetId = $(this).attr("href");
+//   const targetElement = $("#" == targetId ? "html" : targetId);
+//   const targetPosition = targetElement.offset().top;
+
+//   if (targetElement.length) {
+//     $("html, body").animate(
+//       {
+//         scrollTop: targetPosition,
+//       },
+//       scrollSpeed,
+//       "swing"
+//     );
+//   }
+// });
